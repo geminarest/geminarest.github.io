@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="魔兽世界怀旧服锻造1-375攻略指南，提供详细的学习地点、配方获取顺序、材料清单及技能提升路线，助你快速精通锻造专业技能。">
+    <meta name="keywords" content="锻造1-375, 魔兽世界, 怀旧服, 锻造攻略, 装备制作, 锻造技能">
+    <title>锻造1-375-魔兽世界怀旧服锻造专业技能升级与装备制作全攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c79c6e; /* 铁锈金 */
+            --secondary-color: #1a1a1a; /* 深炭灰 */
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #d4af37; /* 纯金 */
+            --border-radius: 8px;
+            --spacing: 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(30, 30, 30, 0.95);
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/seed/forging/1600/600') center/cover no-repeat;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #ddd;
+        }
+
+        /* Main Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Skill Steps */
+        .step-card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(199, 156, 110, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .step-level {
+            font-size: 0.9rem;
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .step-craft {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .step-location {
+            font-size: 0.9rem;
+            color: #888;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .materials-list {
+            list-style: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+        }
+
+        .materials-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .materials-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        aside {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-box {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-box h3 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .sidebar-list {
+            list-style: none;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-list a {
+            display: block;
+            padding: 8px 10px;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .sidebar-list a:hover {
+            background-color: rgba(199, 156, 110, 0.2);
+        }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            margin-top: 10px;
+        }
+
+        .data-table th, .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        .data-table th {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .data-table tr:hover {
+            background-color: rgba(255,255,255,0.02);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Utility */
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        .badge-craft { background-color: #444; color: #fff; }
+        .badge-learn { background-color: var(--primary-color); color: #000; font-weight: bold; }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="logo">WoW <span>Forge</span></div>
+        <nav>
+            <ul>
+                <li><a href="#overview">概览</a></li>
+                <li><a href="#steps">升级路线</a></li>
+                <li><a href="#materials">材料清单</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>锻造1-375</h1>
+        <p>魔兽世界怀旧服锻造专业技能升级与顶级装备制作全攻略</p>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview">
+        <h2 class="section-title">专业概览</h2>
+        <article style="background-color: var(--card-bg); padding: 25px; border-radius: var(--border-radius);">
+            <p>锻造是魔兽世界中一项极具生产价值的专业技能，能够制造护甲（板甲、锁甲、皮甲）、武器和珠宝加工所需的金属部件。在怀旧服环境中，锻造是制作<strong>奥金锭</strong>、<strong>瑟银锭</strong>等关键材料的唯一途径，同时也是获取<strong>魔暴龙皮</strong>、<strong>秘银锭</strong>等稀有资源的重要手段。</p>
+            <br>
+            <p>本指南旨在帮助玩家从零开始，规划出一条高效、经济的技能升级路线，避免在低级阶段浪费过多金币，并最终达到满级（375），为制作顶级装备和赚钱打下基础。</p>
+        </article>
+    </section>
+
+    <!-- Main Skill Steps -->
+    <section id="steps">
+        <h2 class="section-title">技能升级路线 (1-375)</h2>
+        <div class="main-grid">
+            <!-- Left Content: Steps -->
+            <div class="steps-content">
+                
+                <!-- Phase 1: 1-75 (Bronze) -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-level">阶段一：青铜时代 (1-75)</span>
+                        <span class="step-craft">铁棒 x 20</span>
+                    </div>
+                    <p class="step-location">起始：新手村铁匠铺，学习技能后即可制作。</p>
+                    <ul class="materials-list">
+                        <li>铁矿石 x 20</li>
+                        <li>铜锭 x 20</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2: 75-150 (Iron) -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-level">阶段二：铁器时代 (75-150)</span>
+                        <span class="step-craft">秘银锭 x 20</span>
+                    </div>
+                    <p class="step-location">地点：铁炉堡 (Ironforge) 或 奥格瑞玛。</p>
+                    <ul class="materials-list">
+                        <li><strong>关键配方：</strong>秘银锻造图纸：秘银锭 (NPC购买)</li>
+                        <li>秘银矿石 x 20</li>
+                        <li>瑟银矿石 x 10 (用于熔炼)</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3: 150-215 (Thorium) -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-level">阶段三：瑟银时代 (150-215)</span>
+                        <span class="step-craft">瑟银护腿 x 15</span>
+                    </div>
+                    <p class="step-location">地点：希利苏斯 (Hillsbrad Foothills) 或 沃达恩。</p>
+                    <ul class="materials-list">
+                        <li>瑟银矿石 x 60+</li>
+                        <li>大地精华 x 15+</li>
+                    </ul>
+                    <p style="font-size: 0.85rem; color: #888; margin-top: 5px;">提示：此阶段需大量矿石，建议在希利苏斯采集。</p>
+                </div>
+
+                <!-- Phase 4: 215-280 (Fel Iron) -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-level">阶段四：地狱火时代 (215-280)</span>
+                        <span class="step-craft">日灸护手 x 15</span>
+                    </div>
+                    <p class="step-location">地点：地狱火半岛。</p>
+                    <ul class="materials-list">
+                        <li>日灸矿石 x 45+</li>
+                        <li>源质砂 x 15+</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 5: 280-300 (Adamantite) -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-level">阶段五：精金时代 (280-300)</span>
+                        <span class="step-craft">精金束棒 x 10</span>
+                    </div>
+                    <p class="step-location">地点：纳格兰。</p>
+                    <ul class="materials-list">
+                        <li>精金矿石 x 20</li>
+                        <li>大地精华 x 10</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 6: 300-375 (Elementium) -->
+                <div class="step-card">
+                    <div class="step-header">
+                        <span class="step-level">阶段六：元素时代 (300-375)</span>
+                        <span class="step-craft">元素护腕 x 15</span>
+                    </div>
+                    <p class="step-location">地点：盘牙水库 或 虚空风暴。</p>
+                    <ul class="materials-list">
+                        <li>元素之土 x 15</li>
+                        <li>元素之水 x 15</li>
+                        <li>元素之火 x 15</li>
+                        <li>元素之空气 x 15</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Right Sidebar: Quick Links -->
+            <aside>
+                <div class="sidebar-box">
+                    <h3>快速导航</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#steps">详细升级路线</a></li>
+                        <li><a href="#materials">材料获取建议</a></li>
+                        <li><a href="#trades">高级配方列表</a></li>
+                        <li><a href="#profit">赚钱技巧</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>关键配方</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#">秘银重靴 (150)</a></li>
+                        <li><a href="#">魔化瑟银板甲 (215)</a></li>
+                        <li><a href="#">日灸护手 (230)</a></li>
+                        <li><a href="#">精金束棒 (280)</a></li>
+                        <li><a href="#">元素护腕 (300)</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>重要提示</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">
+                        1. 熔炼是节省金币的关键，不要直接购买矿石，建议自己采矿并熔炼。<br>
+                        2. 300级后需要学习 [秘银转化] 等分支技能，请务必在主城学习。<br>
+                        3. 375级后可制作 [魔化源质锭]，是工程学和珠宝加工的核心材料。
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section id="materials">
+        <h2 class="section-title">材料获取与熔炼</h2>
+        <div style="overflow-x: auto;">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>目标材料</th>
+                        <th>来源矿石</th>
+                        <th>熔炼需求</th>
+                        <th>主要用途</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>秘银锭</td>
+                        <td>秘银矿石</td>
+                        <td>瑟银矿石 x 2</td>
+                        <td>制作秘银系列装备、魔化瑟银板甲</td>
+                    </tr>
+                    <tr>
+                        <td>瑟银锭</td>
+                        <td>瑟银矿石</td>
+                        <td>金矿石 x 2</td>
+                        <td>制作护腿、强化装备</td>
+                    </tr>
+                    <tr>
+                        <td>精金锭</td>
+                        <td>精金矿石</td>
+                        <td>富金矿石 x 2</td>
+                        <td>制作束棒、强化装备</td>
+                    </tr>
+                    <tr>
+                        <td>魔化源质锭</td>
+                        <td>源质矿石</td>
+                        <td>源质砂 x 2</td>
+                        <td>顶级制造材料、工程学</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Advanced Crafting Section -->
+    <section id="trades">
+        <h2 class="section-title">375级后顶级制造</h2>
+        <p>达到375级后，锻造职业不再受限于提升技能等级，转而专注于制造高价值的成品和组件。</p>
+        <br>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            <div class="step-card" style="border-left: 4px solid var(--accent-color);">
+                <h3 style="color: var(--accent-color); margin-bottom: 10px;">魔化源质板甲</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">这是锻造职业最著名的成品，全甲板甲，拥有极高的防御属性。制作需要大量魔化源质锭和符文线。</p>
+            </div>
+            <div class="step-card" style="border-left: 4px solid var(--accent-color);">
+                <h3 style="color: var(--accent-color); margin-bottom: 10px;">魔化瑟银板甲</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">250级可学习，是许多职业在TBC前期的毕业板甲，耐久度极高。</p>
+            </div>
+            <div class="step-card" style="border-left: 4px solid var(--accent-color);">
+                <h3 style="color: var(--accent-color); margin-bottom: 10px;">魔化符文线</h3>
+                <p style="font-size: 0.9rem; color: #ccc;">由魔化源质锭和符文线制作，是制作高级装备和背包的关键组件。</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 魔兽世界锻造指南. 本站为玩家攻略整理，非暴雪娱乐官方网站。</p>
+    </div>
+</footer>
+
+</body>
+</html>
