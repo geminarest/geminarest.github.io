@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="桃井早苗（Momoi Sanae）个人资料与作品百科。收录角色设定、声线特点、代表配音作品及粉丝社区讨论。">
+    <meta name="keywords" content="桃井早苗, 桃井早苗声优, 桃井早苗作品, 桃井早苗配音, 桃井早苗百科">
+    <title>桃井早苗-声优资料库与作品百科</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Profile Section */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .avatar-placeholder {
+            width: 100%;
+            height: 300px;
+            background-color: #dfe6e9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #b2bec3;
+            font-size: 3rem;
+        }
+
+        .profile-info h3 {
+            margin: 20px 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .profile-tags span {
+            display: inline-block;
+            background-color: #f1f2f6;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-right: 5px;
+            margin-bottom: 10px;
+        }
+
+        .profile-details {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .detail-label {
+            width: 100px;
+            font-weight: 600;
+            color: var(--text-light);
+            flex-shrink: 0;
+        }
+
+        .detail-value {
+            color: var(--text-main);
+        }
+
+        /* Works Grid */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .work-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .work-cover {
+            height: 180px;
+            background-color: #e0e0e0;
+            position: relative;
+        }
+        
+        .work-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .work-content {
+            padding: 20px;
+        }
+
+        .work-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .work-role {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .work-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            padding: 60px 20px;
+            border-radius: var(--border-radius);
+            margin-top: 40px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            padding-left: 20px;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #b2bec3;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path><path d="M12 6v6l4 2"></path></svg>
+                桃井早苗百科
+            </a>
+            <nav class="nav-links">
+                <a href="#profile">个人资料</a>
+                <a href="#works">代表作品</a>
+                <a href="#faq">常见问题</a>
+                <a href="#community">社区交流</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>桃井早苗</h1>
+            <p>深入探索桃井早苗的配音生涯、代表角色与声线魅力。</p>
+            <a href="#works" class="btn btn-primary">浏览作品列表</a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Profile Section -->
+        <section id="profile">
+            <h2 class="section-title">角色档案</h2>
+            <div class="profile-grid">
+                <div class="profile-card">
+                    <div class="avatar-placeholder">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </div>
+                    <div class="profile-info">
+                        <h3>桃井早苗</h3>
+                        <p style="color: #666;">日本女性声优 / 主持人</p>
+                        <div class="profile-tags">
+                            <span>治愈系</span>
+                            <span>少女音</span>
+                            <span>活力满满</span>
+                            <span>动画配音</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-details">
+                    <div class="detail-row">
+                        <div class="detail-label">出生地</div>
+                        <div class="detail-value">日本东京都</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">所属事务所</div>
+                        <div class="detail-value">Aoni Production (青二Production)</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">出道年份</div>
+                        <div class="detail-value">2006年</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">代表作品</div>
+                        <div class="detail-value">《美食的俘虏》佐伊、《魔笛MAGI》梅莉等</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="detail-label">声线特点</div>
+                        <div class="detail-value">擅长活泼开朗的少女角色，声音清脆有辨识度，同时也能驾驭成熟或稍显冷酷的女性角色。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works">
+            <h2 class="section-title">代表作品</h2>
+            <div class="works-grid">
+                <!-- Work 1 -->
+                <article class="work-card">
+                    <div class="work-cover">
+                        <img src="https://picsum.photos/seed/san/400/300" alt="美食的俘虏封面">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">美食的俘虏</h3>
+                        <p class="work-role">角色：佐伊</p>
+                        <div class="work-meta">
+                            <span>动画 / 2009</span>
+                            <span>重要配角</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Work 2 -->
+                <article class="work-card">
+                    <div class="work-cover">
+                        <img src="https://picsum.photos/seed/mel/400/300" alt="魔笛MAGI封面">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">魔笛MAGI</h3>
+                        <p class="work-role">角色：梅莉</p>
+                        <div class="work-meta">
+                            <span>动画 / 2012</span>
+                            <span>主要角色</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Work 3 -->
+                <article class="work-card">
+                    <div class="work-cover">
+                        <img src="https://picsum.photos/seed/k/400/300" alt="快盗天使双胞胎封面">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">快盗天使双胞胎</h3>
+                        <p class="work-role">角色：天使惠</p>
+                        <div class="work-meta">
+                            <span>动画 / 2011</span>
+                            <span>主角</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Work 4 -->
+                <article class="work-card">
+                    <div class="work-cover">
+                        <img src="https://picsum.photos/seed/haikyuu/400/300" alt="排球少年封面">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">排球少年!!</h3>
+                        <p class="work-role">角色：菅原</p>
+                        <div class="work-meta">
+                            <span>动画 / 2014</span>
+                            <span>配角</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Work 5 -->
+                <article class="work-card">
+                    <div class="work-cover">
+                        <img src="https://picsum.photos/seed/school/400/300" alt="少女终末旅行封面">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">少女终末旅行</h3>
+                        <p class="work-role">角色：尤娜</p>
+                        <div class="work-meta">
+                            <span>动画 / 2017</span>
+                            <span>主角</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Work 6 -->
+                <article class="work-card">
+                    <div class="work-cover">
+                        <img src="https://picsum.photos/seed/monster/400/300" alt="怪物先生封面">
+                    </div>
+                    <div class="work-content">
+                        <h3 class="work-title">怪物先生</h3>
+                        <p class="work-role">角色：蓝</p>
+                        <div class="work-meta">
+                            <span>动画 / 2008</span>
+                            <span>重要配角</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <h2 class="section-title">常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">桃井早苗是声优吗？<span>+</span></div>
+                <div class="faq-answer">是的，桃井早苗是日本知名的男性声优，隶属于青二Production事务所。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">她最著名的作品是什么？<span>+</span></div>
+                <div class="faq-answer">她因在《美食的俘虏》中饰演佐伊一角而被广大观众熟知，同时也因在《魔笛MAGI》中饰演梅莉而受到关注。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">桃井早苗的声音有什么特点？<span>+</span></div>
+                <div class="faq-answer">他的声线通常被认为是比较少年音或少年漫主角音，充满活力和正义感，但也具备一定的变声能力。</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>本站为粉丝整理的资料库，非官方网站。</p>
+            <p>本站内容仅供学习与参考，版权归原作者所有。</p>
+            <p>&copy; 2023 桃井早苗粉丝百科</p>
+        </div>
+    </footer>
+
+</body>
+</html>
