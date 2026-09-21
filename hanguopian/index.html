@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="韩国片 - 深度解析韩国电影、韩剧及综艺的视觉艺术与叙事魅力。提供最新韩国影视资讯、经典作品回顾、导演与演员深度访谈以及观影指南。">
+    <meta name="keywords" content="韩国片, 韩国电影, 韩剧, 韩国综艺, 视觉艺术, 叙事技巧, 影视资讯">
+    <title>韩国片-深度影视艺术解析与观影指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e50914; /* Netflix-like red */
+            --secondary-color: #221f1f;
+            --accent-color: #46d369; /* Success green */
+            --text-main: #ffffff;
+            --text-secondary: #b3b3b3;
+            --bg-body: #141414;
+            --bg-card: #1f1f1f;
+            --font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: background-color 0.3s;
+        }
+
+        header.scrolled {
+            background-color: var(--bg-body);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--text-main);
+            font-size: 0.9rem;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-icon {
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: brightness(0.6);
+        }
+
+        .hero-content {
+            max-width: 600px;
+            padding-left: var(--spacing-unit);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #b20710;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255,255,255,0.3);
+            color: white;
+            margin-left: 1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.5);
+        }
+
+        /* Category Grid */
+        .categories {
+            padding: 4rem 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .category-card {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            background-color: #2a2a2a;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 4rem 0;
+            border-top: 1px solid #333;
+        }
+
+        /* Movie List */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .movie-card {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .movie-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .movie-poster {
+            position: relative;
+            aspect-ratio: 2/3;
+            overflow: hidden;
+        }
+
+        .movie-poster img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+        }
+
+        .movie-card:hover .movie-poster img {
+            transform: scale(1.1);
+        }
+
+        .rating-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.8);
+            color: var(--accent-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .movie-info {
+            padding: 1rem;
+        }
+
+        .movie-title {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .movie-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Analysis Section */
+        .analysis-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+
+        .article-card {
+            margin-bottom: 2rem;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        /* Sidebar */
+        aside .widget {
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .trend-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .trend-list li span.rank {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 0;
+            background-color: #000;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            margin-bottom: 1rem;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .faq-answer {
+            padding: 0 1.2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.2rem;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 3rem 0;
+            border-top: 1px solid #333;
+            margin-top: 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .analysis-layout {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none; /* Simplified mobile nav for this demo */
+            }
+            
+            .hero-content {
+                padding-left: 0;
+                text-align: center;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container nav-wrapper">
+            <div class="logo">K-Cinema</div>
+            <nav>
+                <ul>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">电视剧</a></li>
+                    <li><a href="#">综艺</a></li>
+                    <li><a href="#">深度解析</a></li>
+                    <li><a href="#">榜单</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">🔍</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg">
+                <img src="https://picsum.photos/seed/koreanfilm/1920/1080" alt="韩国电影经典场景" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="hero-content">
+                <h1>探索韩国电影的<br>视觉美学与叙事力量</h1>
+                <p>从《寄生虫》的社会隐喻到《釜山行》的人性考验，深度解读韩国影视工业的崛起之路与艺术成就。</p>
+                <div>
+                    <a href="#movies" class="btn btn-primary">开始观看</a>
+                    <a href="#analysis" class="btn btn-secondary">阅读深度解析</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="container categories">
+            <h2 class="section-title">热门分类</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">🎬</div>
+                    <h3>经典电影</h3>
+                    <p style="font-size:0.8rem; color:#888; margin-top:0.5rem;">奥斯卡获奖作品与影史经典</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">📺</div>
+                    <h3>热门剧集</h3>
+                    <p style="font-size:0.8rem; color:#888; margin-top:0.5rem;">高分韩剧与悬疑惊悚佳作</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎭</div>
+                    <h3>导演访谈</h3>
+                    <p style="font-size:0.8rem; color:#888; margin-top:0.5rem;">奉俊昊、奉尚昊等大师观点</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">✨</div>
+                    <h3>视觉特效</h3>
+                    <p style="font-size:0.8rem; color:#888; margin-top:0.5rem;">CGI技术与实景结合案例</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Movies -->
+        <section id="movies" class="content-section">
+            <div class="container">
+                <h2 class="section-title">近期推荐</h2>
+                <div class="movie-grid">
+                    <!-- Movie Card 1 -->
+                    <article class="movie-card">
+                        <div class="movie-poster">
+                            <span class="rating-badge">9.2</span>
+                            <img src="https://picsum.photos/seed/kmovie1/300/450" alt="寄生虫电影海报">
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">寄生虫</h3>
+                            <div class="movie-meta">
+                                <span>2019</span>
+                                <span>剧情/惊悚</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Movie Card 2 -->
+                    <article class="movie-card">
+                        <div class="movie-poster">
+                            <span class="rating-badge">8.8</span>
+                            <img src="https://picsum.photos/seed/kmovie2/300/450" alt="釜山行海报">
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">釜山行</h3>
+                            <div class="movie-meta">
+                                <span>2016</span>
+                                <span>动作/灾难</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Movie Card 3 -->
+                    <article class="movie-card">
+                        <div class="movie-poster">
+                            <span class="rating-badge">8.5</span>
+                            <img src="https://picsum.photos/seed/kmovie3/300/450" alt="老男孩海报">
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">老男孩</h3>
+                            <div class="movie-meta">
+                                <span>2003</span>
+                                <span>剧情/犯罪</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Movie Card 4 -->
+                    <article class="movie-card">
+                        <div class="movie-poster">
+                            <span class="rating-badge">9.0</span>
+                            <img src="https://picsum.photos/seed/kmovie4/300/450" alt="雪国列车海报">
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">雪国列车</h3>
+                            <div class="movie-meta">
+                                <span>2013</span>
+                                <span>科幻/灾难</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis & Sidebar -->
+        <section id="analysis" class="content-section" style="background-color: #0f0f0f;">
+            <div class="container">
+                <div class="analysis-layout">
+                    <div class="main-content">
+                        <h2 class="section-title">深度解析：韩国影视的独特魅力</h2>
+                        
+                        <article class="article-card">
+                            <img src="https://picsum.photos/seed/koreanart/800/400" alt="韩国电影制作现场" class="article-img">
+                            <h3 class="article-title">从类型片到艺术片：韩国电影的工业化突破</h3>
+                            <p class="article-excerpt">韩国电影产业在过去二十年实现了惊人的跨越。从早期的模仿好莱坞，到如今在国际电影节屡获殊荣，韩国导演们如何平衡商业类型片的艺术追求，是值得深入探讨的话题。</p>
+                            <a href="#" style="color:var(--primary-color); font-size:0.9rem;">阅读全文 &rarr;</a>
+                        </article>
+
+                        <article class="article-card">
+                            <img src="https://picsum.photos/seed/koreandrama/800/400" alt="韩剧拍摄花絮" class="article-img">
+                            <h3 class="article-title">韩剧叙事结构：反转与情感共鸣的完美结合</h3>
+                            <p class="article-excerpt">韩剧之所以能风靡亚洲，不仅在于其精致的服化道，更在于其紧凑的叙事节奏和高密度的情节反转。本文将拆解几部经典韩剧的剧本结构。</p>
+                            <a href="#" style="color:var(--primary-color); font-size:0.9rem;">阅读全文 &rarr;</a>
+                        </article>
+                    </div>
+
+                    <aside>
+                        <div class="widget">
+                            <h4 class="widget-title">年度热门榜单</h4>
+                            <ul class="trend-list">
+                                <li><span class="rank">1</span> <a href="#">首尔之春</a> <span>9.5分</span></li>
+                                <li><span class="rank">2</span> <a href="#">素媛</a> <span>9.4分</span></li>
+                                <li><span class="rank">3</span> <a href="#">辩护人</a> <span>9.3分</span></li>
+                                <li><span class="rank">4</span> <a href="#">辩护人</a> <span>9.3分</span></li>
+                                <li><span class="rank">5</span> <a href="#">辩护人</a> <span>9.3分</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="widget">
+                            <h4 class="widget-title">导演推荐</h4>
+                            <ul class="trend-list">
+                                <li><span class="rank">•</span> <a href="#">奉俊昊</a></li>
+                                <li><span class="rank">•</span> <a href="#">奉尚昊</a></li>
+                                <li><span class="rank">•</span> <a href="#">李沧东</a></li>
+                                <li><span class="rank">•</span> <a href="#">金基德</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container" style="max-width: 800px;">
+                <h2 class="section-title">常见问题</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>哪里可以合法观看韩国电影？</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>目前国内主要的正版流媒体平台如爱奇艺、腾讯视频、优酷等均已购入大量韩国影视版权。此外，部分海外流媒体服务（如Netflix、Disney+）也提供官方引进或授权的韩国内容。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>韩国电影分级制度是怎样的？</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>韩国电影分级制度较为严格，主要分为12岁、15岁、18岁和全民（大众）四个级别。部分涉及暴力、血腥或性暗示的题材通常被限制在18级，未满18岁观众需在监护人陪同下观看。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>韩国综艺有哪些特点？</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>韩国综艺以高强度的剪辑、精心设计的游戏规则以及嘉宾之间真实的化学反应著称。从真人秀到脱口秀，形式多样，注重娱乐效果的同时也常融入社会议题。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>K-Cinema</h4>
+                    <p style="color:#666; font-size:0.9rem;">致力于推广韩国影视文化，为影迷提供最专业的资讯与观影指南。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#">电影库</a></li>
+                        <li><a href="#">剧集库</a></li>
+                        <li><a href="#">综艺频道</a></li>
+                        <li><a href="#">导演介绍</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">联系合作</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">加入会员</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 K-Cinema. All rights reserved. 本站内容仅供学习交流，不代表本站立场。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky Header Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+                  </html>
