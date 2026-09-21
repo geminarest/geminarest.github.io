@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="情感小说在线阅读平台，提供现代言情、都市情感、虐心故事、治愈系文学等热门情感小说免费阅读。精选高分情感小说推荐，涵盖爱情、亲情、友情等多元情感主题。">
+    <meta name="keywords" content="情感小说,在线阅读,言情小说,都市情感,虐心小说,治愈系小说">
+    <title>情感小说-精选高分情感故事与在线阅读指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d63384;
+            --primary-hover: #b02a6c;
+            --secondary-color: #6f42c1;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --text-secondary: #6c757d;
+            --border-color: #e9ecef;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-bar {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 25px;
+            border: 1px solid var(--border-color);
+            font-size: 1rem;
+            outline: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .search-bar input:focus {
+            border-color: var(--primary-color);
+        }
+
+        /* 分类导航 */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .cat-tag {
+            padding: 0.4rem 1.2rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+
+        .cat-tag:hover, .cat-tag.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* 推荐内容区 */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 1.5rem;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .book-info {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .book-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .book-tags {
+            margin-top: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            background: #f1f3f5;
+            color: var(--text-secondary);
+        }
+
+        .tag.hot {
+            background: #fff0f6;
+            color: var(--primary-color);
+        }
+
+        /* 特色板块 */
+        .feature-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .feature-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            color: var(--primary-color);
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                height: auto;
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .feature-section {
+                grid-template-columns: 1fr;
+            }
+
+            .book-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 1rem;
+            }
+
+            .book-cover {
+                height: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                <span>墨香情感</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">现代言情</a></li>
+                    <li><a href="#">都市情感</a></li>
+                    <li><a href="#">虐心故事</a></li>
+                    <li><a href="#">治愈系</a></li>
+                    <li><a href="#">排行榜</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 区域 -->
+        <section class="hero">
+            <div class="container">
+                <h1>在文字中寻找情感的共鸣</h1>
+                <p>汇集全网热门情感小说，无论是虐心虐肺的悲剧，还是温暖治愈的日常，都能在这里找到属于你的那份感动。</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="搜索小说名、作者或关键词...">
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 分类筛选 -->
+            <div class="category-nav">
+                <span class="cat-tag active">全部</span>
+                <span class="cat-tag">都市爱情</span>
+                <span class="cat-tag">暗恋成真</span>
+                <span class="cat-tag">破镜重圆</span>
+                <span class="cat-tag">先婚后爱</span>
+                <span class="cat-tag">师生恋</span>
+                <span class="cat-tag">破镜重圆</span>
+                <span class="cat-tag">久别重逢</span>
+            </div>
+
+            <!-- 热门推荐 -->
+            <section>
+                <h2 class="section-title">本周热门推荐</h2>
+                <div class="book-grid">
+                    <!-- 小说卡片 1 -->
+                    <article class="book-card">
+                        <img src="https://picsum.photos/seed/novel1/300/400" alt="小说封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">时光里的温柔回响</h3>
+                            <div class="book-meta">
+                                <span>作者：林浅浅</span>
+                                <span>2.3万人读过</span>
+                            </div>
+                            <div class="book-tags">
+                                <span class="tag hot">热门</span>
+                                <span class="tag">治愈</span>
+                                <span class="tag">都市</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 小说卡片 2 -->
+                    <article class="book-card">
+                        <img src="https://picsum.photos/seed/novel2/300/400" alt="小说封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">错过的人终会相逢</h3>
+                            <div class="book-meta">
+                                <span>作者：顾北城</span>
+                                <span>1.8万人读过</span>
+                            </div>
+                            <div class="book-tags">
+                                <span class="tag">虐心</span>
+                                <span class="tag">久别重逢</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 小说卡片 3 -->
+                    <article class="book-card">
+                        <img src="https://picsum.photos/seed/novel3/300/400" alt="小说封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">雨夜里的便利店</h3>
+                            <div class="book-meta">
+                                <span>作者：苏小暖</span>
+                                <span>9千多人读过</span>
+                            </div>
+                            <div class="book-tags">
+                                <span class="tag">治愈</span>
+                                <span class="tag">生活流</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 小说卡片 4 -->
+                    <article class="book-card">
+                        <img src="https://picsum.photos/seed/novel4/300/400" alt="小说封面" class="book-cover">
+                        <div class="book-info">
+                            <h3 class="book-title">心动预警：你是我的</h3>
+                            <div class="book-meta">
+                                <span>作者：橘猫</span>
+                                <span>1.5万人读过</span>
+                            </div>
+                            <div class="book-tags">
+                                <span class="tag">甜宠</span>
+                                <span class="tag">校园</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 特色板块 -->
+            <section class="feature-section">
+                <div class="feature-card">
+                    <h2 class="section-title">阅读指南</h2>
+                    <ul class="feature-list">
+                        <li>
+                            <svg class="feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4>海量资源</h4>
+                                <p class="text-secondary">收录超过十万本高质量情感小说，涵盖各种情感题材。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4>免费阅读</h4>
+                                <p class="text-secondary">所有小说均提供免费章节试读，无广告打扰。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="feature-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h4>个性化推荐</h4>
+                                <p class="text-secondary">根据你的阅读偏好，智能推荐你可能喜欢的作品。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h2 class="section-title">热门标签云</h2>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <a href="#" class="cat-tag">暗恋</a>
+                        <a href="#" class="cat-tag">暗恋</a>
+                        <a href="#" class="cat-tag">破镜重圆</a>
+                        <a href="#" class="cat-tag">先婚后爱</a>
+                        <a href="#" class="cat-tag">师生恋</a>
+                        <a href="#" class="cat-tag">久别重逢</a>
+                        <a href="#" class="cat-tag">替身文学</a>
+                        <a href="#" class="cat-tag">追妻火葬场</a>
+                        <a href="#" class="cat-tag">双洁</a>
+                        <a href="#" class="cat-tag">破镜重圆</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer style="background: #fff; padding: 3rem 0; margin-top: 3rem; border-top: 1px solid var(--border-color);">
+        <div class="container" style="text-align: center; color: var(--text-secondary);">
+            <p>&copy; 2023 墨香情感小说网 版权所有</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">本站所有小说内容均来自互联网，仅供学习交流使用，请支持正版。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
